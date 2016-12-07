@@ -1,0 +1,19 @@
+name: sxbiff
+version: '1.3'
+summary: 'xbiff with signals'
+description: |
+  Like xbiff, but raises/lowers the mailbox by USR1/USR2 instead of checking
+  a mail spool.
+confinement: strict
+grade: devel
+
+apps:
+  sxbiff:
+    command: sxbiff
+    plugs: [x11]
+
+parts:
+  sxbiff:
+    plugin: make
+    artifacts: [sxbiff]
+    source: https://github.com/woodruffw/sxbiff/archive/1.3.tar.gz

@@ -1,0 +1,18 @@
+name: xnelson
+version: 'git'
+summary: 'Nelson for X'
+description: |
+  A small utility for keeping you on task.
+confinement: strict
+grade: devel
+
+apps:
+  xnelson:
+    command: xnelson
+    plugs: [x11]
+
+parts:
+  xnelson:
+    plugin: make
+    artifacts: [xnelson]
+    source: https://github.com/woodruffw/xnelson.git

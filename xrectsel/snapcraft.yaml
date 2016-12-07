@@ -1,0 +1,18 @@
+name: xrectsel
+version: '0.3.2'
+summary: 'Print the geometry of a rectangular screen region'
+description: |
+  xrectsel is a small program that tells you the geometry of a rectangular
+  screen region which you have selected by dragging the mouse / pointer.
+confinement: strict
+grade: devel
+
+apps:
+  xrectsel:
+    command: xrectsel
+    plugs: [x11]
+
+parts:
+  xrectsel:
+    plugin: autotools
+    source: https://github.com/lolilolicon/xrectsel/archive/0.3.2.tar.gz
