@@ -1,0 +1,19 @@
+name: fstrings
+version: 'git'
+summary: 'fast strings implementation'
+description: |
+  A "fast", naive implementation of the strings utility.
+  Doesn't care about executable formats, has no dependencies.
+confinement: strict
+grade: devel
+
+apps:
+  fstrings:
+    command: fstrings
+
+parts:
+  fstrings:
+    plugin: make
+    artifacts: [fstrings]
+    source: https://github.com/woodruffw/snippets.git
+    source-subdir: fstrings
